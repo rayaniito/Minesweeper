@@ -41,23 +41,3 @@ class IBoardGenerator(ABC):
         Returns an iterable or collection of coordinates where mines should be placed.
         """
         pass
-
-
-class ICellRenderer(ABC):
-    """
-    Interface for UI cell rendering
-    """
-
-    @abstractmethod
-    def update_cell(self, r: int, c: int, cell):
-        """
-        Updates the visual representation of the cell at (r, c) which is called when a cell is revealed, flagged, or changed.
-        """
-        pass
-
-    @abstractmethod
-    def show_message(self, title: str, message: str):
-        """
-        Displays a message to the user (Game Over ! / You win !)
-        """
-        pass
